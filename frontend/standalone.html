@@ -795,7 +795,9 @@ function App() {
   const v = bad.length > 0 ? ["vbad", "🛑 下請法に抵触する可能性のある取引が" + bad.length + "件あります", "60日超の支払期日・書面の未交付・減額・返品は、公正取引委員会の勧告や指導の対象になり得ます。至急ご確認ください。"] : total > 0 ? ["vmid", "⚠ 確認が必要な点が" + total + "件あります", "重大なものはありませんが、内容をご確認ください。"] : ["vgood", "✅ 点検した範囲では問題は見つかりませんでした", "引き続き取引ごとの確認をおすすめします。"];
   return /*#__PURE__*/React.createElement("div", {
     className: "wrap"
-  }, /*#__PURE__*/React.createElement(DataBar, null), /*#__PURE__*/React.createElement("h1", null, "\u4E0B\u8ACB\u6CD5\u30C1\u30A7\u30C3\u30AF"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement(DataBar, null), /*#__PURE__*/React.createElement("h1", null, "\u4E0B\u8ACB\u6CD5\u30C1\u30A7\u30C3\u30AF"), !pro && /*#__PURE__*/React.createElement("p", {
+    style: { fontSize: 12.5, color: "#6b7280", margin: "0 0 12px" }
+  }, "\uD83C\uDD93 \u767B\u9332\u4E0D\u8981\u30FB", window.zenFreeLimit ? window.zenFreeLimit() : 3, "\u56DE\u307E\u3067\u7121\u6599\u3067\u304A\u8A66\u3057\u3044\u305F\u3060\u3051\u307E\u3059"), /*#__PURE__*/React.createElement("div", {
     className: "sub",
     style: {
       marginBottom: 10
